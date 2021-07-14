@@ -1,3 +1,6 @@
 .ipynb_checkpoints
 credentials.py
 *.pyc
+sample.py
+tensorflow_extraction.ipynb
+test.py
