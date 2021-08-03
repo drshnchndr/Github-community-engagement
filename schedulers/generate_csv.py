@@ -1,18 +1,8 @@
 import pymongo
-import requests
-import json
 import numpy as np
 import pandas as pd
 import time
 import datetime
-from bson.json_util import dumps, loads
-
-# d1 = datetime.datetime.strptime("2021-05-01", '%Y-%m-%d')
-# d2 = datetime.datetime.today()
-# difference = d2-d1
-# print(difference.days)
-# dti = pd.date_range("2021-05-01", periods=difference.days+1, freq="D")
-# print(dti[-1])
 
 def generateIssuesCSV():
 
@@ -107,7 +97,7 @@ def generateReleasesCSV():
     # print(df.head(5))
     # print(list(df.columns))
 
-    releases_df = df[['id','name', 'tag_name', 'created_at','published_at', 'org_id', 'repo_id', 'body']]
+    releases_df = df[['id','name', 'tag_name', 'created_at','published_at', 'org_id', 'repo_id']]
     
     print(releases_df.columns)
 
@@ -175,7 +165,7 @@ def generatePullsCSV():
 
 # generateIssuesCSV()
 # generateIssueCommentCSV()
-generateRepoUsersCSV()
+# generateRepoUsersCSV()
 # generateEventsCSV()
-# generateReleasesCSV()
+generateReleasesCSV()
 # generatePullsCSV()
